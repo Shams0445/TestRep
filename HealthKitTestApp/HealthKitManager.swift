@@ -51,7 +51,7 @@ class HealthKitManager: ObservableObject {
                                       quantitySamplePredicate: presicate,
                                       options: .cumulativeSum) { _, result, error in
             guard let result = result, let sum = result.sumQuantity() else {
-                print("Failed to read user's steps with error: \(error?.localizedDescription ?? "Unknown error")")
+                print("Failed to read user's steps with error: \(error?.localizedDescription ?? "error")")
                 return
             }
             
